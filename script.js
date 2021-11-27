@@ -3,6 +3,8 @@ var earth = new WE.map("earth_div", {
   zoom: 3,
   dragging: true,
   scrollWheelZoom: true,
+  atmosphere: true,
+  // sky: true,
 });
 
 WE.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(earth);
