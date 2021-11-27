@@ -20,6 +20,10 @@ function fetchupdate() {
         // if it's not first fetch
         //remove last iss icon
         lastissicon.removeFrom(earth);
+        earth.setView([
+          data.iss_position.latitude,
+          data.iss_position.longitude,
+        ]);
 
         //add new red marker
         lastmark = WE.marker(
@@ -29,7 +33,7 @@ function fetchupdate() {
           64
         ).addTo(earth);
 
-        //add iss icon
+        //add iss icon for new location
         lastissicon = WE.marker(
           [data.iss_position.latitude, data.iss_position.longitude],
           "./iss.png",
